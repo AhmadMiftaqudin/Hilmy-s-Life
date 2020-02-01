@@ -1,5 +1,6 @@
 #include "activity.h"
 #include <math.h>
+#include <string.h>
 
 Activity createActivity(char * name, int happiness, int money, int hygiene, int hunger, int social, int health){
     Activity act;
@@ -31,7 +32,8 @@ void modifyActivity(Activity *act, float costMult, float bonusMult){
 }
 
 void printActivity(Activity act){
-    printf("%s\t[ ", act.name);
+    if(strlen(act.name) > 10){printf("%s\t[ ", act.name);}
+    else {printf("%s\t\t[ ", act.name);}
 
     if(act.money > 0) printf("+%d$ ", act.money);
     if(act.money < 0) printf("%d$ ", act.money);
