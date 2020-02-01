@@ -4,7 +4,9 @@
 
 int random(int min, int max){
     srand(time(0));
-    return (rand() % (max-min) + min);
+    if (max-min > 1){
+    return (rand() % (max-min) + min);}
+    else {return (rand() % 2 + min);}
 }
 
 void bar(int b, int maxbar){
