@@ -15,12 +15,12 @@ Activity createActivity(char * name, int happiness, int money, int hygiene, int 
 }
 
 void modifyActivity(Activity *act, float costMult, float bonusMult){
-    if(act->happiness > 0) act->happiness = (int) round(bonusMult*act->happiness);
-    if(act->money > 0) act->money = (int) round(bonusMult*act->money);
-    if(act->hygiene > 0) act->hygiene = (int) round(bonusMult*act->hygiene);
-    if(act->hunger > 0) act->hunger = (int) round(bonusMult*act->hunger);
-    if(act->social > 0) act->social = (int) round(bonusMult*act->social);
-    if(act->health > 0) act->health = (int) round(bonusMult*act->health);
+    if(act->happiness > 0) act->happiness = (int) ceil(bonusMult*act->happiness);
+    if(act->money > 0) act->money = (int) ceil(bonusMult*act->money);
+    if(act->hygiene > 0) act->hygiene = (int) ceil(bonusMult*act->hygiene);
+    if(act->hunger > 0) act->hunger = (int) ceil(bonusMult*act->hunger);
+    if(act->social > 0) act->social = (int) ceil(bonusMult*act->social);
+    if(act->health > 0) act->health = (int) ceil(bonusMult*act->health);
 
     if(act->happiness < 0) act->happiness = (int) floor(costMult*act->happiness);
     if(act->money < 0) act->money = (int) floor(costMult*act->money);
