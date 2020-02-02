@@ -21,8 +21,7 @@ typedef struct {
 Robot initRobot();
 
 /* Executor Robot */
-bool doAct(Robot *r, Activity a);
-void doReversedAct(Robot *r, Activity a);
+bool doAct(Robot *r, Activity a, bool force);
 void respondEvent(Robot *r, Event *e);
 void showStatus(Robot r);
 

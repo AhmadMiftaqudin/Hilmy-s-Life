@@ -5,14 +5,15 @@
 #include "activity.h"
 
 typedef struct{
-    Activity activity;
+    Activity positiveactivity;
+    Activity negativeactivity;
     char * name;
     char * description;
     char * positive;
     char * negative;
 } Event;
 
-Event createEvent(Activity activity, char *description, char * positive, char * negative);
+Event createEvent(Activity positiveactivity, Activity negativeactivity, char *description, char * positive, char * negative);
 
 void printEvent(Event event);
 

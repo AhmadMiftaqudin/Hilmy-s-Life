@@ -1,13 +1,14 @@
 #include "event.h"
 #include <stdio.h>
 
-Event createEvent(Activity activity, char * description, char * positive, char * negative){
+Event createEvent(Activity positiveactivity, Activity negativeactivity, char * description, char * positive, char * negative){
     Event e;
-    e.name = activity.name;
+    e.name = positiveactivity.name;
     e.description = description;
     e.positive = positive;
     e.negative = negative;
-    e.activity = activity;
+    e.positiveactivity = positiveactivity;
+    e.negativeactivity = negativeactivity;
     return e;
 }
 
