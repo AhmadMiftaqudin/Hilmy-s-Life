@@ -14,10 +14,6 @@ Event createEvent(Activity positiveactivity, Activity negativeactivity, char * d
 
 void printEvent(Event e){
     int i=0;
-    printf("\n");
-    for(i=0;i<70;i++){
-        printf("-");
-    }
 
     printf("\nEvent: %s\n%s", e.name, e.description);
     
