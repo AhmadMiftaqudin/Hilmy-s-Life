@@ -9,15 +9,15 @@ Robot initRobot(){
     r.money = 50;
     r.social = 0;
 
-    int constant1 = random(10,15);
-    int constant2 = random(12,17);
+    int constant1 = random(10,19);
+    int constant2 = random(12,27);
     int bonus = random(1,12);
     int bonus2 = random(1,13);
 
     r.happiness = constant1+25-bonus;
-    r.hygiene = 25-constant1+bonus;
+    r.hygiene = 40-constant1+bonus;
     r.hunger = constant2+25-bonus2;
-    r.health = 25-constant2+bonus2;
+    r.health = 40-constant2+bonus2;
 
     r.deathCause = "";
     r.isDead = false;
