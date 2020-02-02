@@ -45,8 +45,8 @@ int main() {
         }
 
         for (i=0;i<numberofactivity;i++){
-            if (i==(action-1)) {modifyActivity(&act[i], 1.25, 0.75);}
-            else {modifyActivity(&act[i], 0.8, 1.2);}
+            if (i==(action-1)) {modifyActivity(&act[i], 1.6, 0.45);}
+            else {modifyActivity(&act[i], 0.95, 1.1);}
         }
 
         round++;
