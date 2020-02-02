@@ -2,6 +2,7 @@
 #define _ROBOT_H_
 
 #include "activity.h"
+#include "event.h"
 #include <stdio.h>
 #include <stdbool.h>
 
@@ -20,7 +21,9 @@ typedef struct {
 Robot initRobot();
 
 /* Executor Robot */
-bool doAct(Robot *r, Activity *a);
+bool doAct(Robot *r, Activity a);
+void doReversedAct(Robot *r, Activity a);
+void respondEvent(Robot *r, Event *e);
 void showStatus(Robot r);
 
 #endif
